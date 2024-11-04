@@ -16,7 +16,7 @@ function App() {
             element={<Register />}
           />
           <Route element={<PrivateGuard />}>
-            <Route path={`${APP_ROUTES.dashboard}/*`} element={<PrivateRouter />}/>
+            <Route path={`${APP_ROUTES.dashboard.root}/*`} element={<PrivateRouter />}/>
           </Route>
         </  RoutesWithNotFound>
       </BrowserRouter>

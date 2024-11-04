@@ -1,19 +1,18 @@
 import { ReactNode } from "react";
-import { SidebarProvider, SidebarTrigger } from "@/components";
-import { AppSidebar } from "@/components";
+import { Helmet } from "react-helmet-async";
 
 interface Props {
+  title: string;
   children: ReactNode;
 }
 
-export default function Layout({ children }: Props) {
+export function Layout({ title, children }: Props) {
   return (
-    <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <SidebarTrigger />
-        {children}
-      </main>
-    </SidebarProvider>
+    <>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+      {children}
+    </>
   );
 }
