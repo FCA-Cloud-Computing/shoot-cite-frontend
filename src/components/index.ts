@@ -7,4 +7,4 @@ export * from './ui/sheet.tsx';
 export * from './ui/sidebar.tsx';
 export * from './ui/skeleton.tsx';
 export * from './ui/tooltip.tsx';
-export * from './AppSidebar.tsx';
+export * from './core/AppSidebar.tsx';

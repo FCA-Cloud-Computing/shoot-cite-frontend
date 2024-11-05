@@ -49,10 +49,10 @@ export function AppSidebar() {
                     side="top"
                     className="w-[--radix-popper-anchor-width] bg-black transition duration-300"
                   >
-                    <DropdownMenuItem className="p-2 hover:bg-white/20 rounded transition duration-300">
+                    <DropdownMenuItem className="p-2 hover:bg-white/20 rounded transition duration-300 cursor-pointer">
                       <span>Account</span>
                     </DropdownMenuItem>
-                    <DropdownMenuItem className="p-2 hover:bg-white/20 rounded transition duration-300">
+                    <DropdownMenuItem className="p-2 hover:bg-white/20 rounded transition duration-300 cursor-pointer">
                       <span>Sign out</span>
                     </DropdownMenuItem>
                   </DropdownMenuContent>
