@@ -1,24 +1,24 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { FormValuesLogin, schemaLogin } from "@/models";
 import { InputForm } from "./InputForm";
-import { FormValues, schema } from "@/models";
 import { Button } from "@/components";
 
-export const Form = () => {
+export const FormLogin = () => {
   const {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>({
-    resolver: zodResolver(schema),
+  } = useForm<FormValuesLogin>({
+    resolver: zodResolver(schemaLogin),
     mode: "onBlur",
-    defaultValues:{
+    defaultValues: {
       email: "",
       password: "",
-    }
+    },
   });
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {
+  const onSubmit: SubmitHandler<FormValuesLogin> = (data) => {
     console.log(data);
   };
 
@@ -38,7 +38,9 @@ export const Form = () => {
         type="password"
         error={errors.password}
       />
-      <Button variant="secondary" type="submit" className="rounded-sm">Login</Button>
+      <Button variant="secondary" type="submit" className="rounded-sm w-full">
+        Login
+      </Button>
     </form>
   );
 };
