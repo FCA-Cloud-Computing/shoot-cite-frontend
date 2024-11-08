@@ -1,5 +1,5 @@
 import { Layout } from "@/layouts";
-import { Form } from "./components";
+import { FormLogin } from "./components";
 import { Link } from "react-router-dom";
 
 export function Login() {
@@ -11,7 +11,7 @@ export function Login() {
             <h1 className="text-3xl font-bold">Login</h1>
             <p className="text-zinc-400">Enter your email below to login to your account.</p>
           </header>
-          <Form />
+          <FormLogin />
           <footer>
             <p className="text-sm flex items-center gap-2">
               Don't have an account? <Link to="/register" className="text-zinc-400 hover:underline">Sign up</Link>

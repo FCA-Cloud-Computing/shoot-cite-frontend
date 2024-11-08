@@ -8,6 +8,7 @@ interface Props {
 }
 
 export function RoutesWithNotFound({ children }: Props) {
+
   return (
     <Routes>
       {children}
