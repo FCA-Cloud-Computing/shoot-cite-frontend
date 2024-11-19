@@ -12,7 +12,7 @@ export const schemaRegister = z.object({
   email: z.string().email("Invalid Email").min(1, "Email is mandatory"),
   password: z.string().min(6, "The password must be at least 6 characters"),
   confirmPassword: z.string().min(6, "The confirmation must be at least 6 characters")
-}).refine(data => data.password !== data.confirmPassword, {
+}).refine(data => data.password === data.confirmPassword, {
   message: "Passwords are different",
   path: ['confirmPassword']
 })
