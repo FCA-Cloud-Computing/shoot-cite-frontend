@@ -1,3 +1,2 @@
-export * from './FormLogin'
 export * from './InputForm'	
-export * from './FormRegister'
+export * from './Form'
